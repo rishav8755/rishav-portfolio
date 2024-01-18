@@ -1,0 +1,90 @@
+.container.header__container {
+    text-align: center;   
+    position: relative;
+    height: 100vh;
+    padding: 100px 0;
+}
+header{
+    height: 100vh;
+}
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 0 20px;
+}
+.header__container .header_socials {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+a.scroll__down {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 0;    
+    transform: rotate(90deg);
+}
+.me {
+    width: 50%;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.me>img{
+    width: 50%;
+    margin: 0 auto;   
+border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .me {
+        width: 70%;       
+    }
+    .me>img{
+        width: 100%;
+       
+    }
+    .header__container >h1 {
+        font-size: 22px;
+    }
+    .cta .btn {        
+        padding: 9px 13px;       
+    }
+}
+@media screen and (min-device-width: 500px) and (max-device-width: 768px) { 
+        .me {
+        width: 60%;       
+    }
+    .me>img{
+        width: 60%;
+       
+    }
+    .header__container >h1 {
+        font-size: 36px;
+    }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) { 
+        .me {
+        width: 45%;       
+    }
+    .me>img{
+        width: 60%;
+       
+    }
+}
