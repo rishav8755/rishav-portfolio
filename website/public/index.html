@@ -2,42 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#00d4aa" />
+    <meta name="msapplication-TileColor" content="#00d4aa" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Rishav Patel - Full Stack Developer | Modern Web Solutions</title>
+    <meta name="description" content="Rishav Patel - Experienced Full Stack Developer specializing in React, Node.js, and modern web technologies. Creating innovative digital solutions with clean code and exceptional user experiences." />
+    <meta name="keywords" content="Full Stack Developer, React Developer, Node.js, JavaScript, Web Development, Portfolio, Rishav Patel" />
+    <meta name="author" content="Rishav Patel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://bhanupratap.com" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bhanupratap.com" />
+    <meta property="og:title" content="Rishav Patel - Full Stack Developer" />
+    <meta property="og:description" content="Experienced Full Stack Developer creating innovative digital solutions with modern web technologies." />
+    <meta property="og:image" content="http://bhanupratap.com/og-image.jpg" />
+    <meta property="og:site_name" content="Rishav Patel Portfolio" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://bhanupratap.com" />
+    <meta property="twitter:title" content="Rishav Patel - Full Stack Developer" />
+    <meta property="twitter:description" content="Experienced Full Stack Developer creating innovative digital solutions with modern web technologies." />
+    <meta property="twitter:image" content="http://bhanupratap.com/og-image.jpg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rishav Patel",
+      "jobTitle": "Full Stack Developer",
+      "url": "http://bhanupratap.com",
+      "sameAs": [
+        "https://github.com/rishavpatel",
+        "https://linkedin.com/in/rishavpatel"
+      ],
+      "knowsAbout": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Full Stack Development",
+        "Web Development"
+      ]
+    }
+    </script>
+    
+    <!-- Favicons -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- PWA Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      body { visibility: hidden; }
+      .loaded { visibility: visible; }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>This portfolio requires JavaScript to function properly. Please enable JavaScript in your browser settings and reload the page.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
+    <!-- Remove FOUC prevention once loaded -->
+    <script>
+      window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
   </body>
 </html>
