@@ -1,13 +1,51 @@
 import React from 'react'
-import{BsLinkedin} from "react-icons/bs"
-import{FaGithubAlt} from "react-icons/fa"
-import {BsFacebook} from "react-icons/bs"
+import { BsLinkedin, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs"
+import { MdEmail } from "react-icons/md"
+
 const HeaderSocials = () => {
+  const socials = [
+    {
+      icon: <BsLinkedin />,
+      url: "https://linkedin.com/in/rishavpatel",
+      label: "LinkedIn Profile",
+      name: "LinkedIn"
+    },
+    {
+      icon: <BsGithub />,
+      url: "https://github.com/rishavpatel",
+      label: "GitHub Profile",
+      name: "GitHub"
+    },
+    {
+      icon: <BsTwitter />,
+      url: "https://twitter.com/rishavpatel",
+      label: "Twitter Profile",
+      name: "Twitter"
+    },
+    {
+      icon: <MdEmail />,
+      url: "mailto:rishav@example.com",
+      label: "Email Contact",
+      name: "Email"
+    }
+  ]
+
   return (
-    <div className='header_socials'>
-      <a href="https://linkedin.com" target="_blank"><BsLinkedin/></a>
-      <a href="https://Github.com" target="_blank"><FaGithubAlt/></a>
-      <a href="https://facebook.com" target="_blank"><BsFacebook/></a>
+    <div className='header_socials fade-in'>
+      {socials.map((social, index) => (
+        <a 
+          key={index}
+          href={social.url} 
+          target={social.name !== 'Email' ? "_blank" : "_self"}
+          rel={social.name !== 'Email' ? "noopener noreferrer" : ""}
+          aria-label={social.label}
+          className="social-link"
+          style={{ animationDelay: `${1.4 + index * 0.1}s` }}
+        >
+          {social.icon}
+          <span className="social-tooltip">{social.name}</span>
+        </a>
+      ))}
     </div>
   )
 }
